@@ -1,4 +1,13 @@
-<?php session_start; ?>
+<?php session_start; 
+$query = $_SERVER['QUERY_STRING'];
+include('database-info.php');
+if (strpos($query,'name=') !== false) {
+    
+}
+else{
+    echo('<script> window.open("index", _self)');
+}
+?>
 <!DOCTYPE HTML>
 <!--
 	Ion by TEMPLATED
@@ -7,7 +16,7 @@
 -->
 <html>
 	<head>
-		<title>DJ For Us</title>
+		<?php echo "<title> $username </title>" ?>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -41,7 +50,7 @@
 		<!-- One -->
 			<section id="one" class="wrapper style1">
 				<header class="major">
-					<h2>INSERT NAME HERE</h2>
+					<h2>PlayIt4Me</h2>
 					<p>The easiest way to interact with your crowd</p>
 				</header>
 				<div class="container">
